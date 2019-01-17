@@ -10,6 +10,18 @@ function actionList(x) {
   actions[actions.length] = x
 }
 
+function start(){
+setInterval(work, 30);
+}
+
+function work(){
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.rect(50, 50, ranNum, 100);
+  ctx.stroke();
+  ranNum++;
+}
+
 function wander() {
   actionlist("wander");
 }
